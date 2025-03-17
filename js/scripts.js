@@ -6,4 +6,13 @@
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("filtro-categoria").addEventListener("change", function () {
+        let categoria = this.value;
+        let seccion = document.getElementById(categoria);
 
+        if (categoria !== "todas" && seccion) {
+            seccion.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+});
